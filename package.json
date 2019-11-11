@@ -1,0 +1,17 @@
+{
+  "name": "com.nementic.scene-validation",
+  "version": "1.0.0",
+  "displayName": "Scene Validation",
+  "description": "",
+  "unity": "2019.1",
+  "keywords": [
+    "Nementic",
+    "Attribute",
+    "Utility"
+  ],
+  "author": {
+    "name": "Nementic Games GmbH",
+    "email": "mail@nementic.games",
+    "url": "http://www.nementic.games"
+  }
+}

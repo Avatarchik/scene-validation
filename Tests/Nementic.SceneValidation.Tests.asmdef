@@ -1,0 +1,23 @@
+{
+    "name": "Nementic.SceneValidation.Tests",
+    "references": [
+        "GUID:9a39e40419b81fe46b0338f2335101d7",
+        "GUID:4c11fb3f401a97a42b4bc6fcb02fbd96"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.ext.nunit",
+            "expression": "",
+            "define": "NUNIT_ENABLED"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Nementic.SceneValidation.Editor",
+    "references": [
+        "GUID:9a39e40419b81fe46b0338f2335101d7"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": []
+}
