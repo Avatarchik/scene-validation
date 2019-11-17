@@ -55,7 +55,7 @@ namespace Nementic.Validation
             // Cleares and ensures capacity for us.
             scene.GetRootGameObjects(rootGameObjects);
 
-            bool validateInactiveGameObjects = SceneValidationProcessor.ValidationSettings.ValidateInactiveGameObjects;
+            bool validateInactiveGameObjects = ValidationSettings.ValidateInactiveGameObjects;
 
             for (int i = 0; i < rootGameObjects.Count; i++)
             {
@@ -196,7 +196,7 @@ namespace Nementic.Validation
                 return false;
 
             string[] namespaceParts = type.Namespace.Split('.');
-            string[] namespacesToBeValidated = SceneValidationProcessor.ValidationSettings.Namespaces.Value.Split(';');
+            string[] namespacesToBeValidated = ValidationSettings.Namespaces.Value.Split(';');
 
             for (int i = 0; i < namespacesToBeValidated.Length; i++)
             {
