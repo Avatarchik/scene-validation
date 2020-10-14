@@ -18,6 +18,9 @@ namespace Nementic.Validation
         public static readonly Pref<bool> ValidateInactiveGameObjects = new BoolPref(
             "ValidateInactiveGameObjects", "Validate Inactive GameObjects", true);
 
+		public static readonly Pref<string> Assemblies = new StringPref(
+			"Assemblies", "Validation Assemblies", "Assembly-CSharp");
+
         public static readonly Pref<string> Namespaces = new StringPref(
             "Namespaces", "Validation Namespaces", "Nementic");
 

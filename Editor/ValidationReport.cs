@@ -6,6 +6,7 @@ namespace Nementic.Validation
 {
     using System;
     using System.Collections.Generic;
+    using UnityEngine.SceneManagement;
 
     /// <summary>
     /// Used by the validation system to defer the reporting (e.g. logging)
@@ -13,6 +14,8 @@ namespace Nementic.Validation
     /// </summary>
     public class ValidationReport
     {
+		public IEnumerable<Error> Errors => errors;
+
         private readonly List<Error> errors = new List<Error>();
         private Action<Error> logAction;
 
@@ -21,7 +24,18 @@ namespace Nementic.Validation
             errors.Add(new Error(message, context));
         }
 
-        public void Clear()
+		public void AddErrorFormatted(string propertyName, string typeName, UnityEngine.MonoBehaviour monoBehaviour, string prefix = "Missing required reference")
+		{
+			AddError($"{prefix} '{propertyName}' ({typeName}) on '{monoBehaviour.name}'. " +
+					 $"Scene: {GetSceneNameOrUnknownLabel(monoBehaviour.gameObject.scene)}", monoBehaviour);
+		}
+
+		private static string GetSceneNameOrUnknownLabel(Scene scene)
+		{
+			return scene.name.Length > 0 ? scene.name : "Unknown";
+		}
+
+		public void Clear()
         {
             errors.Clear();
         }
@@ -84,7 +98,12 @@ namespace Nementic.Validation
                 this.context = context;
                 this.severity = severity;
             }
-        }
+
+			public override string ToString()
+			{
+				return severity.ToString() + ": " + message;
+			}
+		}
 
         public enum Severity
         {

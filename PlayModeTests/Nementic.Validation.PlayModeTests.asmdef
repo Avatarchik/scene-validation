@@ -1,5 +1,5 @@
 {
-    "name": "Nementic.SceneValidation.Tests",
+    "name": "PlayModeTests",
     "references": [
         "GUID:9a39e40419b81fe46b0338f2335101d7",
         "GUID:4c11fb3f401a97a42b4bc6fcb02fbd96"
@@ -19,5 +19,6 @@
             "expression": "",
             "define": "NUNIT_ENABLED"
         }
-    ]
+    ],
+    "noEngineReferences": false
 }

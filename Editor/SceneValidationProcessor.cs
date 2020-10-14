@@ -4,7 +4,6 @@
 #if UNITY_EDITOR
 namespace Nementic.Validation
 {
-    using System.Collections.Generic;
     using UnityEditor;
     using UnityEditor.Build;
     using UnityEditor.Build.Reporting;
